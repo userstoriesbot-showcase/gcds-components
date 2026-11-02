@@ -1,0 +1,11 @@
+# Showcase fork only (never part of an upstream pull request).
+version: 1
+app:
+  install: "npm ci && npm run build:angular-output-target"
+  start: "npm run start -w @gcds-core/components -- --port {port} --no-open"
+  url: http://localhost:{port}
+  readyPath: /
+  runtime: node24
+demo:
+  maxVideos: 1
+  beforePass: true
